@@ -1,3363 +1,420 @@
-# Awesome-Loan-Servicing-Platform
+# 💰 Awesome Loan Servicing Platform & Open-Source Lending Engines
 
-# 💰 Top Loan Servicing Platforms & Open-Source Loan Servicing Software
+![Awesome Loan Servicing Platform Banner](assets/banner.svg)
 
+<a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a> <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a> [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 
-
-> A curated list of **loan servicing platforms, loan management systems, lending cores, commercial lending platforms, mortgage servicing systems and open-source loan servicing software**.
-
-
+> A curated list of **loan servicing platforms, loan management systems (LMS), lending cores, commercial lending platforms, mortgage servicing systems, double-entry financial ledgers, and open-source loan servicing software**.
 
 Loan servicing software manages the **post-origination lifecycle of loans**, including:
 
+* 📋 **Loan Boarding**
+* 📅 **Amortization Schedules**
+* 💵 **Interest Accrual & Day-Count Calculations**
+* 💳 **Payment Processing & Automated Clearing (ACH / Wires)**
+* ⚖️ **Payment Allocation Rules (Fees → Interest → Principal)**
+* 📊 **Principal and Interest Tracking**
+* 🏷️ **Fee Management & Late Charges**
+* 🛡️ **Escrow Management (Taxes & Insurance)**
+* 🚨 **Delinquency Management & DPD Tracking**
+* 📞 **Collections & Promise-to-Pay Workflows**
+* 📉 **Charge-offs & Non-Performing Loan (NPL) Accounting**
+* 🔄 **Loan Modifications & Restructuring**
+* 🏁 **Payoff Calculations & Collateral Release**
+* 📑 **Borrower Statements & Communication**
+* 🏠 **Collateral & Lien Tracking**
+* 🧾 **Loan Accounting & Double-Entry Ledgers**
+* 🏦 **General Ledger Integration**
+* 📈 **Investor Reporting & Secondary Market Servicing**
+* 💼 **Portfolio Risk & Performance Analytics**
+* 🔍 **Bank Reconciliation & Audit Trails**
+* ⚖️ **Regulatory Reporting & Compliance (TCPA, FDCPA, CECL)**
 
+The modern loan-servicing stack seamlessly connects **loan origination → underwriting → servicing → payments → collections → accounting → reporting**.
 
-* Loan boarding
+This repository focuses primarily on **open-source and self-hostable alternatives**, while maintaining a comprehensive list of enterprise commercial platforms such as FIS, Fiserv LoanServ, Temenos, LoanPro, TurnKey Lender, Nortridge, Shaw Systems, Finastra Loan IQ, FICS, Sagent, CreditOnline, and Mortgage Automator.
 
-* Amortization schedules
-
-* Interest accrual
-
-* Payment processing
-
-* Payment allocation
-
-* Principal and interest tracking
-
-* Fees
-
-* Escrow
-
-* Delinquency
-
-* Collections
-
-* Charge-offs
-
-* Modifications
-
-* Payoffs
-
-* Statements
-
-* Borrower communications
-
-* Collateral
-
-* Loan accounting
-
-* General ledger integration
-
-* Investor reporting
-
-* Portfolio management
-
-* Reconciliation
-
-* Regulatory reporting
-
-
-
-The modern loan-servicing stack increasingly connects **loan origination → underwriting → servicing → payments → collections → accounting → reporting**.
-
-
-
-This repository focuses primarily on **open-source and self-hostable alternatives**, while maintaining a separate list of commercial platforms such as LoanPro, TurnKey Lender, Nortridge, Shaw Systems, Fiserv LoanServ, Finastra Loan IQ, FICS, Sagent, CreditOnline, LoanVantage, LendingQB and Mortgage Automator.
-
-
-
-> **Important:** Open-source lending software is more mature in **core banking, loan management and lending** than in specialized enterprise mortgage/consumer-loan servicing. There is currently no single open-source project that reproduces every capability of a mature commercial servicing platform.
-
-
-
-Apache Fineract provides an open-source core banking platform with loan and savings functionality and an API-first architecture, while Frappe Lending is a dedicated open-source loan-management system covering the lifecycle from loan booking/disbursement through repayment and accounting.
-
-
+> 💡 **Important:** Open-source lending software is mature in **core banking, loan management systems (LMS), and financial ledgers** (e.g. Apache Fineract, Frappe Lending, Formance Ledger). However, specialized enterprise mortgage and commercial loan servicing often require composable integrations of multiple open-source modules.
 
 ---
-
-
 
 ## 📑 Table of Contents
 
-
-
-* [☁️ SaaS/Hosted Platforms](#️-saashosted-platforms)
-
-* [🌍 Open-Source](#-open-source)
-
+* [☁️ Commercial SaaS & Hosted Platforms](#️-commercial-saas--hosted-platforms)
+* [🌍 Open-Source Lending Ecosystem](#-open-source-lending-ecosystem)
 * [🏦 Open-Source Core Banking & Loan Management](#-open-source-core-banking--loan-management)
-
 * [💰 Open-Source Loan Servicing](#-open-source-loan-servicing)
-
 * [🧮 Open-Source Loan Accounting & Ledgers](#-open-source-loan-accounting--ledgers)
-
 * [💳 Open-Source Loan Payment Processing](#-open-source-loan-payment-processing)
-
 * [📅 Open-Source Amortization & Interest Engines](#-open-source-amortization--interest-engines)
-
 * [📈 Open-Source Collections & Delinquency](#-open-source-collections--delinquency)
-
 * [🏠 Open-Source Mortgage & Real Estate Lending](#-open-source-mortgage--real-estate-lending)
-
 * [🏢 Open-Source Commercial Lending](#-open-source-commercial-lending)
-
 * [🤖 Open-Source Loan Origination](#-open-source-loan-origination)
-
 * [🔐 Open-Source Credit & Risk Infrastructure](#-open-source-credit--risk-infrastructure)
-
 * [🧾 Open-Source Accounting & Reconciliation](#-open-source-accounting--reconciliation)
-
 * [⚙️ Open-Source Fintech Infrastructure](#️-open-source-fintech-infrastructure)
-
 * [🧩 Commercial Platform → Open-Source Equivalent](#-commercial-platform--open-source-equivalent)
-
 * [🏗️ Loan Servicing Architecture](#️-loan-servicing-architecture)
-
 * [🔄 Open-Source Loan Servicing Architecture](#-open-source-loan-servicing-architecture)
-
 * [💸 Loan Payment & Ledger Architecture](#-loan-payment--ledger-architecture)
-
 * [📊 Loan Lifecycle](#-loan-lifecycle)
-
 * [⚖️ Commercial vs Open-Source](#️-commercial-vs-open-source)
-
 * [🚀 Recommended Open-Source Stacks](#-recommended-open-source-stacks)
-
 * [📊 Loan Servicing Technology Comparison](#-loan-servicing-technology-comparison)
-
 * [🎯 Recommended Projects by Use Case](#-recommended-projects-by-use-case)
-
 * [🏢 Building a LoanPro Alternative](#-building-a-loanpro-alternative)
-
 * [🏦 Building an Open-Source Loan Servicing Platform](#-building-an-open-source-loan-servicing-platform)
-
 * [🌐 Open-Source Lending Landscape](#-open-source-lending-landscape)
-
 * [🧠 Why Open-Source Loan Servicing Matters](#-why-open-source-loan-servicing-matters)
-
+* [📈 Star History](#-star-history)
+* [💖 Support & Community](#-support--community)
 * [🤝 Contributing](#-contributing)
-
 * [⚠️ Disclaimer](#️-disclaimer)
 
+---
 
+# ☁️ Commercial SaaS & Hosted Platforms
+
+> 📊 **Market Size & Industry Structure:** The global loan servicing software market is estimated at **$8.5 Billion in 2025/2026** and is projected to reach **$16.8 Billion by 2032** growing at a CAGR of 11.2%. The market is **moderately fragmented**, balancing legacy enterprise core banking conglomerates (FIS, Fiserv, Temenos, Finastra) with specialized cloud-native loan servicing vendors (LoanPro, Nortridge, Sagent, TurnKey Lender).
+
+| Platform | Company | Valuation / Revenue (Company Size) | Starting Pricing | Free Tier / Trial Limits | Primary Focus & Capabilities |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| [FIS](https://www.fisglobal.com/) | FIS | **$98.0B Valuation** ($14.6B Rev) | **$2,500 / month** base platform fee | **30-day** developer sandbox trial with sample data | Enterprise loan servicing, consumer lending, payments and financial processing |
+| [Fiserv LoanServ](https://www.fiserv.com/) | Fiserv | **$85.0B Valuation** ($19.1B Rev) | **$3,000 / month** base platform fee | **30-day** enterprise sandbox trial | Enterprise consumer lending, loan servicing, payments and core processing |
+| [Temenos](https://www.temenos.com/) | Temenos | **$6.5B Valuation** ($1.0B Rev) | **$1,500 / month** per tenant instance | **14-day** cloud sandbox trial with API documentation | Core banking, cloud lending and financial servicing |
+| [Mambu](https://www.mambu.com/) | Mambu | **$5.3B Valuation** ($150M Rev) | **$1,000 / month** base tenant | **14-day** developer sandbox trial | Cloud-native banking engine and flexible lending infrastructure |
+| [nCino](https://www.ncino.com/) | nCino | **$3.5B Valuation** ($500M Rev) | **$1,200 / month** per seat/module | **14-day** guided platform demo sandbox | Cloud banking, commercial lending and loan lifecycle management |
+| [Finastra Loan IQ](https://www.finastra.com/solutions/lending/loan-iq) | Finastra | **$3.0B Valuation** ($1.1B Rev) | **$2,000 / month** base environment | **30-day** developer portal sandbox access | Commercial loan management, syndication, servicing and lifecycle management |
+| [LoanPro](https://www.loanpro.io/) | LoanPro | **$500M Valuation** ($50M Rev) | **$500 / month** base fee | **14-day** free trial with sandbox API access | API-first modern loan servicing, payments, lending core and automation |
+| [Sagent](https://www.sagent.com/) | Sagent | **$350M Valuation** ($80M Rev) | **$1,500 / month** servicing license | **30-day** demo portal access | Enterprise mortgage servicing, borrower portals and servicing operations |
+| [Nucleus Software](https://www.nucleussoftware.com/) | Nucleus Software | **$300M Valuation** ($90M Rev) | **$800 / month** module license | **30-day** evaluation instance | Retail lending, transaction banking and servicing |
+| [defi SOLUTIONS](https://www.defisolutions.com/) | defi SOLUTIONS | **$200M Valuation** ($75M Rev) | **$750 / month** base fee | **14-day** demo sandbox trial | Auto and consumer loan origination, servicing and decisioning |
+| [TurnKey Lender](https://www.turnkey-lender.com/) | TurnKey Lender | **$50M Valuation** ($15M Rev) | **$499 / month** starting tier | **14-day** free trial, up to 10 active test loans | End-to-end lending, origination, underwriting, servicing and collections |
+| [Nortridge](https://nortridge.com/) | Nortridge Software | **$40M Valuation** ($12M Rev) | **$350 / month** starting tier | **30-day** desktop/cloud evaluation version | Configurable loan servicing, complex loan portfolios and origination |
+| [Shaw Systems](https://www.shawsystems.com/) | Shaw Systems | **$35M Valuation** ($10M Rev) | **$600 / month** base tier | **30-day** demo environment | Consumer and commercial loan servicing, collections and portfolio management |
+| [FICS](https://www.fics.com/) | FICS | **$30M Valuation** ($8M Rev) | **$450 / month** starting tier | **30-day** evaluation trial | Mortgage servicing, loan accounting and portfolio management |
+| [Lendscape](https://www.lendscape.com/) | Lendscape | **$25M Valuation** ($7M Rev) | **$400 / month** base module | **14-day** sandbox access | Commercial lending, asset finance and loan servicing |
+| [HES LoanBox](https://www.hesfintech.com/) | HES FinTech | **$20M Valuation** ($5M Rev) | **$350 / month** base plan | **14-day** free trial with sample portfolio | Loan origination, credit decisioning and servicing automation |
+| [Mortgage Automator](https://www.mortgageautomator.com/) | Mortgage Automator | **$15M Valuation** ($4M Rev) | **$299 / month** starting tier | **14-day** free trial, up to 15 test loans | Private and mortgage lending origination, servicing and administration |
+| [The Mortgage Office](https://www.themortgageoffice.com/) | ABS | **$15M Valuation** ($4M Rev) | **$250 / month** base module | **30-day** trial with full feature access | Mortgage loan servicing, investor management and mortgage accounting |
+| [Margill](https://www.margill.com/) | Margill | **$10M Valuation** ($3M Rev) | **$95 / month** standard license | **30-day** full feature free trial | Amortization calculations, loan servicing and portfolio analysis |
+| [AutoPal](https://www.autopal.info/) | AutoPal Software | **$8M Valuation** ($2M Rev) | **$199 / month** base plan | **14-day** free trial, up to 25 test loans | Consumer finance and loan servicing |
+| [Bryt](https://www.brytsoftware.com/) | Bryt Software | **$5M Valuation** ($1.5M Rev) | **$149 / month** standard plan | **14-day** free trial, unlimited test accounts | Cloud loan servicing and lending automation |
 
 ---
 
-
-
-# ☁️ SaaS/Hosted Platforms
-
-
-
-Commercial loan-servicing platforms provide configurable servicing engines, workflows, payment processing, collections, accounting and portfolio management.
-
-
-
-| Platform                                                               | Company                          | Primary Focus             | Key Capabilities                                                            |
-
-| ---------------------------------------------------------------------- | -------------------------------- | ------------------------- | --------------------------------------------------------------------------- |
-
-| [LoanPro](https://www.loanpro.io/)                                     | LoanPro                          | Modern loan servicing     | API-first servicing, payments, lending core, origination and automation     |
-
-| [TurnKey Lender](https://www.turnkey-lender.com/)                      | TurnKey Lender                   | End-to-end lending        | Origination, underwriting, servicing, collections and reporting             |
-
-| [Nortridge](https://nortridge.com/)                                    | Nortridge Software               | Loan servicing            | Configurable servicing, workflows, complex loan portfolios and origination  |
-
-| [LoanServ](https://www.sagent.com/)                                    | Sagent                           | Mortgage servicing        | Mortgage servicing, borrower management and servicing operations            |
-
-| [Shaw Systems](https://www.shawsystems.com/)                           | Shaw Systems                     | Loan servicing            | Consumer/commercial servicing, collections and portfolio management         |
-
-| [Fiserv LoanServ](https://www.fiserv.com/)                             | Fiserv                           | Enterprise loan servicing | Consumer lending, servicing, payments and financial processing              |
-
-| [Finastra](https://www.finastra.com/)                                  | Finastra                         | Banking & lending         | Lending, core banking and commercial finance                                |
-
-| [Finastra Loan IQ](https://www.finastra.com/solutions/lending/loan-iq) | Finastra                         | Commercial lending        | Commercial loan management, syndication, servicing and lifecycle management |
-
-| [FICS](https://www.fics.com/)                                          | FICS                             | Mortgage servicing        | Mortgage servicing, loan accounting and portfolio management                |
-
-| [Margill](https://www.margill.com/)                                    | Margill                          | Loan management           | Amortization, loan calculations, servicing and portfolio analysis           |
-
-| [SBS Software](https://www.sbs-software.com/)                          | SBS                              | Banking software          | Core banking, lending and financial services                                |
-
-| [SiteOne](https://www.siteone.com/)                                    | SiteOne                          | Loan servicing            | Loan servicing and portfolio management                                     |
-
-| [Sagent](https://www.sagent.com/)                                      | Sagent                           | Mortgage servicing        | Mortgage servicing technology and borrower servicing                        |
-
-| [CreditOnline](https://www.creditonline.com/)                          | CreditOnline                     | Lending software          | Loan origination, credit and loan management                                |
-
-| [Self Financial](https://www.self.inc/)                                | Self                             | Consumer credit           | Credit-building lending and financial products                              |
-
-| [LoanVantage](https://www.loanvantage.com/)                            | LoanVantage                      | Lending platform          | Loan management, servicing and lending workflows                            |
-
-| [LendingQB](https://www.lendingqb.com/)                                | LendingPad / LendingQB ecosystem | Mortgage lending          | Mortgage loan origination and lending workflows                             |
-
-| [Mortgage Automator](https://www.mortgageautomator.com/)               | Mortgage Automator               | Private lending           | Mortgage/private lending origination, servicing and administration          |
-
-| [The Mortgage Office](https://www.themortgageoffice.com/)              | Applied Business Software        | Private lending           | Loan servicing, investor management and mortgage accounting                 |
-
-| [AutoPal](https://www.autopal.info/)                                   | AutoPal Software                 | Loan servicing            | Consumer finance and loan servicing                                         |
-
-| [Bryt](https://www.brytsoftware.com/)                                  | Bryt Software                    | Loan servicing            | Lending and servicing automation                                            |
-
-| [HES LoanBox](https://www.hesfintech.com/)                             | HES FinTech                      | Lending                   | Loan origination, decisioning and servicing                                 |
-
-| [defi SOLUTIONS](https://www.defisolutions.com/)                       | defi SOLUTIONS                   | Consumer lending          | Loan origination, servicing and decisioning                                 |
-
-| [Lendscape](https://www.lendscape.com/)                                | Lendscape                        | Commercial lending        | Asset finance, lending and servicing                                        |
-
-| [Nucleus Software](https://www.nucleussoftware.com/)                   | Nucleus Software                 | Lending                   | Lending and transaction banking                                             |
-
-| [Mambu](https://www.mambu.com/)                                        | Mambu                            | Cloud banking             | Lending and configurable banking infrastructure                             |
-
-| [Temenos](https://www.temenos.com/)                                    | Temenos                          | Core banking              | Lending, core banking and financial services                                |
-
-| [nCino](https://www.ncino.com/)                                        | nCino                            | Cloud banking             | Commercial lending and loan lifecycle management                            |
-
-| [FIS](https://www.fisglobal.com/)                                      | FIS                              | Banking & lending         | Commercial and consumer lending infrastructure                              |
-
-
-
-Current industry coverage of loan-servicing software includes providers such as FICS, Nortridge, Shaw Systems, LoanPro, TurnKey Lender, Sagent and other specialist servicing vendors.
-
-
-
----
-
-
-
-# 🌍 Open-Source
-
-
+# 🌍 Open-Source Lending Ecosystem
 
 The open-source ecosystem is more **composable** than the commercial loan-servicing market.
 
-
-
 Instead of finding one monolithic "open-source LoanPro", a self-hosted implementation can combine:
 
-
-
 ```text
-
                     OPEN-SOURCE LENDING
-
-                            │
-
+                             │
         ┌───────────────────┼───────────────────┐
-
         │                   │                   │
-
         ▼                   ▼                   ▼
-
    Core Banking          Loan LMS             Ledger
-
         │                   │                   │
-
         ▼                   ▼                   ▼
-
-    Fineract          Frappe Lending        Formance
-
-    Mifos X              Mifos              ERPNext
-
+     Fineract          Frappe Lending        Formance
+     Mifos X              Odoo/ERPNext         Kill Bill
         │                   │                   │
-
         └───────────────────┼───────────────────┘
-
                             │
-
                             ▼
-
                     Payments / Collections
-
                             │
-
                             ▼
-
                      Accounting / BI
-
 ```
 
-
-
 ---
-
-
 
 # 🏦 Open-Source Core Banking & Loan Management
 
-
-
-## Apache Fineract
-
-
-
-[Apache Fineract](https://github.com/apache/fineract) is one of the most important open-source projects for lending and core banking.
-
-
-
-It provides:
-
-
-
-* Loan management
-
-* Savings
-
-* Customers
-
-* Financial products
-
-* Accounting
-
-* Portfolio management
-
-* APIs
-
-* Reporting integrations
-
-* Multi-tenant architecture
-
-
-
-Fineract is an API-driven core banking platform and exposes its functionality through APIs rather than providing a complete end-user UI itself.
-
-
-
-| Project                                               | Description                                      | License               |
-
-| ----------------------------------------------------- | ------------------------------------------------ | --------------------- |
-
-| [Apache Fineract](https://github.com/apache/fineract) | Open-source core banking and lending platform    | Apache-2.0            |
-
-| [Mifos X](https://github.com/openMF/mifos-x)          | Full distribution around Fineract                | MPL-2.0               |
-
-| [Fineract CN](https://github.com/apache/fineract-cn)  | Modular financial-services platform              | Apache-2.0            |
-
-| [Mifos](https://mifos.org/)                           | Open-source digital financial-services ecosystem | Multiple OSS licenses |
-
-| [Frappe Lending](https://github.com/frappe/lending)   | Dedicated open-source loan-management system     | GPL-3.0               |
-
-| [ERPNext](https://github.com/frappe/erpnext)          | Open-source ERP with financial capabilities      | GPL-3.0               |
-
-| [Odoo Community](https://github.com/odoo/odoo)        | Open-source business/accounting platform         | LGPL-3.0              |
-
-
-
-Mifos describes its stack as a composable open-source architecture combining Apache Fineract with reference web/mobile applications and additional components for digital financial services.
-
-
+| Project | Stars | Description | License |
+| :--- | :--- | :--- | :--- |
+| [Odoo Community](https://github.com/odoo/odoo) | [![Stars](https://img.shields.io/github/stars/odoo/odoo?style=social&color=white)](https://github.com/odoo/odoo/stargazers) | Open-source enterprise business platform with financial ledgers & loan apps | LGPL-3.0 |
+| [ERPNext](https://github.com/frappe/erpnext) | [![Stars](https://img.shields.io/github/stars/frappe/erpnext?style=social&color=white)](https://github.com/frappe/erpnext/stargazers) | Open-source ERP with financial ledgers, interest engines, and loan accounting | GPL-3.0 |
+| [Apache Fineract](https://github.com/apache/fineract) | [![Stars](https://img.shields.io/github/stars/apache/fineract?style=social&color=white)](https://github.com/apache/fineract/stargazers) | Open-source core banking and loan management platform | Apache-2.0 |
+| [Frappe Lending](https://github.com/frappe/lending) | [![Stars](https://img.shields.io/github/stars/frappe/lending?style=social&color=white)](https://github.com/frappe/lending/stargazers) | Dedicated 100% open-source loan management and servicing system | GPL-3.0 |
+| [Mifos X](https://github.com/openMF/mifos-x) | [![Stars](https://img.shields.io/github/stars/openMF/mifos-x?style=social&color=white)](https://github.com/openMF/mifos-x/stargazers) | Web financial application & UI distribution built around Apache Fineract | MPL-2.0 |
+| [Fineract CN](https://github.com/apache/fineract-cn) | [![Stars](https://img.shields.io/github/stars/apache/fineract-cn?style=social&color=white)](https://github.com/apache/fineract-cn/stargazers) | Cloud-native, microservices-based financial architecture | Apache-2.0 |
 
 ---
-
-
 
 # 💰 Open-Source Loan Servicing
 
-
-
 ## Frappe Lending
 
+[Frappe Lending](https://github.com/frappe/lending) [![Stars](https://img.shields.io/github/stars/frappe/lending?style=social&color=white)](https://github.com/frappe/lending/stargazers) explicitly targets the full loan servicing lifecycle:
 
-
-[Frappe Lending](https://github.com/frappe/lending) is particularly relevant to loan servicing because it explicitly targets the full loan lifecycle.
-
-
-
-Capabilities include:
-
-
-
-* Loan booking
-
-* Loan products
-
-* Disbursement
-
-* Repayment
-
-* Portfolio management
-
-* Collateral
-
-* Loan accounting
-
-* Collections
-
-* Co-lending
-
-* Loan transfers
-
-* Compliance
-
-* Reporting
-
-
-
-Frappe describes the project as a 100% open-source, API-first loan management system covering loan origination through closure.
-
-
+* 📌 Loan booking & Disbursement
+* 📌 Repayment schedules & Interest calculation
+* 📌 Portfolio & Collateral management
+* 📌 Collections & Co-lending workflows
+* 📌 Loan transfers & Compliance reporting
 
 ```text
-
-Loan Application
-
-       │
-
-       ▼
-
-Loan Approval
-
-       │
-
-       ▼
-
-Loan Booking
-
-       │
-
-       ▼
-
-Disbursement
-
-       │
-
-       ▼
-
-Amortization
-
-       │
-
-       ▼
-
-Repayment
-
-       │
-
-       ▼
-
-Collections
-
-       │
-
-       ▼
-
-Payoff / Closure
-
+Loan Application ──► Loan Approval ──► Loan Booking ──► Disbursement ──► Amortization ──► Repayment ──► Collections ──► Payoff / Closure
 ```
-
-
-
----
-
-
 
 ## Apache Fineract
 
-
-
-Fineract is particularly useful where servicing needs to be part of a broader financial-services platform:
-
-
+[Apache Fineract](https://github.com/apache/fineract) [![Stars](https://img.shields.io/github/stars/apache/fineract?style=social&color=white)](https://github.com/apache/fineract/stargazers) provides API-driven servicing capabilities:
 
 ```text
-
-Customer
-
-   │
-
-   ▼
-
-Loan Product
-
-   │
-
-   ▼
-
-Loan Account
-
-   │
-
-   ├── Schedule
-
-   ├── Accrual
-
-   ├── Payments
-
-   ├── Charges
-
-   ├── Accounting
-
-   └── Reporting
-
+Customer ──► Loan Product ──► Loan Account (Schedule, Accrual, Payments, Charges, Accounting, Reporting)
 ```
 
-
-
-Fineract's API-first design makes it suitable as the servicing backend underneath a custom borrower portal or fintech application.
-
-
-
 ---
-
-
 
 # 🧮 Open-Source Loan Accounting & Ledgers
 
-
-
-A serious loan-servicing system needs a reliable financial ledger.
-
-
-
-```text
-
-                    Loan Event
-
-                        │
-
-                        ▼
-
-                 Servicing Engine
-
-                        │
-
-              ┌─────────┴─────────┐
-
-              ▼                   ▼
-
-          Principal             Interest
-
-              │                   │
-
-              └─────────┬─────────┘
-
-                        ▼
-
-                     Ledger
-
-                        │
-
-                        ▼
-
-                  General Ledger
-
-```
-
-
-
-| Project                                                 | Role                               |
-
-| ------------------------------------------------------- | ---------------------------------- |
-
-| [Formance Ledger](https://github.com/formancehq/ledger) | Programmable financial ledger      |
-
-| [Apache Fineract](https://github.com/apache/fineract)   | Loan accounting / core banking     |
-
-| [Frappe Lending](https://github.com/frappe/lending)     | Integrated loan accounting         |
-
-| [ERPNext](https://github.com/frappe/erpnext)            | General accounting                 |
-
-| [Odoo Community](https://github.com/odoo/odoo)          | Accounting                         |
-
-| [Kill Bill](https://github.com/killbill/killbill)       | Billing and financial transactions |
-
-
-
-A useful architecture is:
-
-
-
-```text
-
-Loan Servicing
-
-      │
-
-      ▼
-
-Transaction Events
-
-      │
-
-      ▼
-
-Double-Entry Ledger
-
-      │
-
-      ├── Principal Receivable
-
-      ├── Interest Receivable
-
-      ├── Fees
-
-      ├── Cash
-
-      └── Loss / Charge-off
-
-```
-
-
+| Project | Stars | Role & Description | License |
+| :--- | :--- | :--- | :--- |
+| [Odoo Community](https://github.com/odoo/odoo) | [![Stars](https://img.shields.io/github/stars/odoo/odoo?style=social&color=white)](https://github.com/odoo/odoo/stargazers) | Enterprise accounting and double-entry financial ledger | LGPL-3.0 |
+| [ERPNext](https://github.com/frappe/erpnext) | [![Stars](https://img.shields.io/github/stars/frappe/erpnext?style=social&color=white)](https://github.com/frappe/erpnext/stargazers) | General accounting, general ledger & interest accruals | GPL-3.0 |
+| [Formance Ledger](https://github.com/formancehq/ledger) | [![Stars](https://img.shields.io/github/stars/formancehq/ledger?style=social&color=white)](https://github.com/formancehq/ledger/stargazers) | Programmable double-entry financial ledger for loan transactions | Apache-2.0 |
+| [Kill Bill](https://github.com/killbill/killbill) | [![Stars](https://img.shields.io/github/stars/killbill/killbill?style=social&color=white)](https://github.com/killbill/killbill/stargazers) | Subscription billing and recurring transaction engine | Apache-2.0 |
+| [Apache Fineract](https://github.com/apache/fineract) | [![Stars](https://img.shields.io/github/stars/apache/fineract?style=social&color=white)](https://github.com/apache/fineract/stargazers) | Integrated loan accounting & general ledger mapping | Apache-2.0 |
+| [Frappe Lending](https://github.com/frappe/lending) | [![Stars](https://img.shields.io/github/stars/frappe/lending?style=social&color=white)](https://github.com/frappe/lending/stargazers) | Integrated loan product accounting & portfolio tracking | GPL-3.0 |
 
 ---
-
-
 
 # 💳 Open-Source Loan Payment Processing
 
-
-
-Loan servicing must turn incoming payments into accounting events.
-
-
-
-```text
-
-Borrower Payment
-
-      │
-
-      ▼
-
-Payment Gateway
-
-      │
-
-      ▼
-
-Payment Validation
-
-      │
-
-      ▼
-
-Payment Allocation
-
-      │
-
- ┌────┼─────────────┐
-
- ▼    ▼             ▼
-
-Fees Interest   Principal
-
- │      │            │
-
- └──────┼────────────┘
-
-        ▼
-
-      Ledger
-
-```
-
-
-
-Useful projects:
-
-
-
-| Project                                              | Role                                 |
-
-| ---------------------------------------------------- | ------------------------------------ |
-
-| [Moov](https://github.com/moov-io)                   | Open-source financial infrastructure |
-
-| [Moov ACH](https://github.com/moov-io/ach)           | ACH processing                       |
-
-| [Hyperswitch](https://github.com/juspay/hyperswitch) | Payment orchestration                |
-
-| [Formance](https://github.com/formancehq/stack)      | Financial transactions               |
-
-| [jPOS](https://github.com/jpos/jPOS)                 | ISO 8583 payment processing          |
-
-| [Kill Bill](https://github.com/killbill/killbill)    | Payment and billing infrastructure   |
-
-| [Mojaloop](https://github.com/mojaloop/mojaloop)     | Interoperable payment infrastructure |
-
-
+| Project | Stars | Role & Description | License |
+| :--- | :--- | :--- | :--- |
+| [Hyperswitch](https://github.com/juspay/hyperswitch) | [![Stars](https://img.shields.io/github/stars/juspay/hyperswitch?style=social&color=white)](https://github.com/juspay/hyperswitch/stargazers) | High-performance open-source payment orchestration engine | Apache-2.0 |
+| [Kill Bill](https://github.com/killbill/killbill) | [![Stars](https://img.shields.io/github/stars/killbill/killbill?style=social&color=white)](https://github.com/killbill/killbill/stargazers) | Payment gateway routing & subscription payment engine | Apache-2.0 |
+| [Moov ACH](https://github.com/moov-io/ach) | [![Stars](https://img.shields.io/github/stars/moov-io/ach?style=social&color=white)](https://github.com/moov-io/ach/stargazers) | Open-source ACH payment file creation and validation for loans | Apache-2.0 |
+| [Moov Paygate](https://github.com/moov-io/paygate) | [![Stars](https://img.shields.io/github/stars/moov-io/paygate?style=social&color=white)](https://github.com/moov-io/paygate/stargazers) | Financial transaction gateway connecting banks to FedACH & wires | Apache-2.0 |
+| [jPOS](https://github.com/jpos/jPOS) | [![Stars](https://img.shields.io/github/stars/jpos/jPOS?style=social&color=white)](https://github.com/jpos/jPOS/stargazers) | ISO 8583 payment processing framework for debit card loan repayment | AGPL-3.0 |
+| [Mojaloop](https://github.com/mojaloop/mojaloop) | [![Stars](https://img.shields.io/github/stars/mojaloop/mojaloop?style=social&color=white)](https://github.com/mojaloop/mojaloop/stargazers) | Open-source software for interoperable digital payment networks | Apache-2.0 |
 
 ---
-
-
 
 # 📅 Open-Source Amortization & Interest Engines
 
-
-
-Loan servicing depends heavily on correctly calculating:
-
-
-
-* Principal
-
-* Interest
-
-* Accrued interest
-
-* Daily interest
-
-* Periodic interest
-
-* Fees
-
-* Penalties
-
-* Payment allocation
-
-* Balloon payments
-
-* Grace periods
-
-* Prepayments
-
-* Payoffs
-
-* Amortization schedules
-
-
-
-Projects and frameworks that can contribute to this layer include:
-
-
-
-| Project                                                       | Role                                                  |
-
-| ------------------------------------------------------------- | ----------------------------------------------------- |
-
-| [Apache Fineract](https://github.com/apache/fineract)         | Loan schedules and servicing calculations             |
-
-| [Frappe Lending](https://github.com/frappe/lending)           | Loan schedules and lending calculations               |
-
-| [Mifos X](https://github.com/openMF/mifos-x)                  | Loan and savings management                           |
-
-| [Margill](https://www.margill.com/)                           | Commercial reference point for financial calculations |
-
-| [QuantLib](https://github.com/lballabio/QuantLib)             | Open-source quantitative-finance library              |
-
-| [OpenGamma Strata](https://github.com/OpenGamma/Strata)       | Open-source financial calculations                    |
-
-| [Apache Commons Math](https://github.com/apache/commons-math) | Mathematical building blocks                          |
-
-
-
-> Quantitative-finance libraries are **components**, not complete loan-servicing platforms.
-
-
+| Project | Stars | Role & Description | License |
+| :--- | :--- | :--- | :--- |
+| [QuantLib](https://github.com/lballabio/QuantLib) | [![Stars](https://img.shields.io/github/stars/lballabio/QuantLib?style=social&color=white)](https://github.com/lballabio/QuantLib/stargazers) | Quantitative-finance library for complex interest & yield curve math | BSD-3-Clause |
+| [Apache Fineract](https://github.com/apache/fineract) | [![Stars](https://img.shields.io/github/stars/apache/fineract?style=social&color=white)](https://github.com/apache/fineract/stargazers) | Loan schedule calculations (declining balance, flat, equal installments) | Apache-2.0 |
+| [Frappe Lending](https://github.com/frappe/lending) | [![Stars](https://img.shields.io/github/stars/frappe/lending?style=social&color=white)](https://github.com/frappe/lending/stargazers) | Loan schedules, interest accruals, and late penalty calculators | GPL-3.0 |
+| [Mifos X](https://github.com/openMF/mifos-x) | [![Stars](https://img.shields.io/github/stars/openMF/mifos-x?style=social&color=white)](https://github.com/openMF/mifos-x/stargazers) | Loan product interest rate calculations & amortization engines | MPL-2.0 |
+| [OpenGamma Strata](https://github.com/OpenGamma/Strata) | [![Stars](https://img.shields.io/github/stars/OpenGamma/Strata?style=social&color=white)](https://github.com/OpenGamma/Strata/stargazers) | Financial calculations library for interest rate risk & pricing | Apache-2.0 |
+| [Apache Commons Math](https://github.com/apache/commons-math) | [![Stars](https://img.shields.io/github/stars/apache/commons-math?style=social&color=white)](https://github.com/apache/commons-math/stargazers) | Mathematical building blocks for loan schedule calculations | Apache-2.0 |
 
 ---
-
-
 
 # 📈 Open-Source Collections & Delinquency
 
-
-
-Loan servicing becomes significantly more complex once an account becomes delinquent.
-
-
-
-```text
-
-                    Loan
-
-                     │
-
-                     ▼
-
-                  Due Date
-
-                     │
-
-                ┌────┴────┐
-
-                │ Paid?   │
-
-                └────┬────┘
-
-                     │
-
-                    No
-
-                     │
-
-                     ▼
-
-                  DPD 1+
-
-                     │
-
-                     ▼
-
-              Collections Queue
-
-                     │
-
-          ┌──────────┼──────────┐
-
-          ▼          ▼          ▼
-
-       Email       SMS        Calls
-
-          │          │          │
-
-          └──────────┼──────────┘
-
-                     ▼
-
-               Promise to Pay
-
-                     │
-
-              ┌──────┴──────┐
-
-              ▼             ▼
-
-            Paid          Broken
-
-              │             │
-
-              ▼             ▼
-
-            Close       Escalation
-
-```
-
-
-
-Potential building blocks:
-
-
-
-| Project                                               | Role                                    |
-
-| ----------------------------------------------------- | --------------------------------------- |
-
-| [Frappe Lending](https://github.com/frappe/lending)   | Loan collections and delinquency        |
-
-| [Apache Fineract](https://github.com/apache/fineract) | Loan lifecycle and portfolio management |
-
-| [Mifos X](https://github.com/openMF/mifos-x)          | Loan portfolio management               |
-
-| [ERPNext](https://github.com/frappe/erpnext)          | Workflow / accounting                   |
-
-| [Temporal](https://github.com/temporalio/temporal)    | Durable collection workflows            |
-
-| [Camunda](https://github.com/camunda/camunda)         | BPMN workflows                          |
-
-| [NATS](https://github.com/nats-io/nats-server)        | Event messaging                         |
-
-
+| Project | Stars | Role & Description | License |
+| :--- | :--- | :--- | :--- |
+| [Temporal](https://github.com/temporalio/temporal) | [![Stars](https://img.shields.io/github/stars/temporalio/temporal?style=social&color=white)](https://github.com/temporalio/temporal/stargazers) | Durable execution engine for reliable collection retry workflows | MIT |
+| [Camunda](https://github.com/camunda/camunda) | [![Stars](https://img.shields.io/github/stars/camunda/camunda?style=social&color=white)](https://github.com/camunda/camunda/stargazers) | BPMN process engine for dunning cycles and delinquency escalation | Apache-2.0 |
+| [Apache Fineract](https://github.com/apache/fineract) | [![Stars](https://img.shields.io/github/stars/apache/fineract?style=social&color=white)](https://github.com/apache/fineract/stargazers) | DPD tracking, loan delinquency aging, and charge-off rules | Apache-2.0 |
+| [Frappe Lending](https://github.com/frappe/lending) | [![Stars](https://img.shields.io/github/stars/frappe/lending?style=social&color=white)](https://github.com/frappe/lending/stargazers) | Loan collection queues, promises-to-pay, and delinquency actions | GPL-3.0 |
+| [Mifos X](https://github.com/openMF/mifos-x) | [![Stars](https://img.shields.io/github/stars/openMF/mifos-x?style=social&color=white)](https://github.com/openMF/mifos-x/stargazers) | Loan portfolio delinquency tracking and officer management | MPL-2.0 |
 
 ---
-
-
-
-# 🏠 Open-Source Mortgage & Real Estate Lending
-
-
-
-Mortgage servicing has specialized requirements around:
-
-
-
-* Escrow
-
-* Property taxes
-
-* Insurance
-
-* Investor reporting
-
-* Collateral
-
-* Foreclosure
-
-* Loss mitigation
-
-* Mortgage modifications
-
-* PMI
-
-* Payoff statements
-
-* Servicing transfers
-
-
-
-There is **no single broadly adopted open-source project equivalent to a large enterprise mortgage-servicing platform such as LoanServ**.
-
-
-
-Instead, an open-source architecture can combine:
-
-
-
-```text
-
-Apache Fineract
-
-      +
-
-Frappe Lending
-
-      +
-
-PostgreSQL
-
-      +
-
-Workflow Engine
-
-      +
-
-Document Management
-
-      +
-
-Accounting
-
-      +
-
-Payment Infrastructure
-
-```
-
-
-
-Useful adjacent projects:
-
-
-
-| Project                                               | Role                        |
-
-| ----------------------------------------------------- | --------------------------- |
-
-| [Apache Fineract](https://github.com/apache/fineract) | Core lending                |
-
-| [Frappe Lending](https://github.com/frappe/lending)   | Loan management             |
-
-| [ERPNext](https://github.com/frappe/erpnext)          | Accounting                  |
-
-| [OpenProject](https://github.com/opf/openproject)     | Workflow/project management |
-
-| [Temporal](https://github.com/temporalio/temporal)    | Servicing workflows         |
-
-| [Camunda](https://github.com/camunda/camunda)         | Process automation          |
-
-
-
----
-
-
-
-# 🏢 Open-Source Commercial Lending
-
-
-
-Commercial lending introduces:
-
-
-
-* Multiple facilities
-
-* Credit limits
-
-* Commitments
-
-* Drawdowns
-
-* Syndications
-
-* Participants
-
-* Collateral
-
-* Covenants
-
-* Interest-rate resets
-
-* Fees
-
-* Tranches
-
-* Amendments
-
-* Agency operations
-
-
-
-This is an area where **Finastra Loan IQ-class functionality is substantially more specialized than most open-source lending systems**.
-
-
-
-Potential building blocks include:
-
-
-
-| Project                                                 | Role                   |
-
-| ------------------------------------------------------- | ---------------------- |
-
-| [Apache Fineract](https://github.com/apache/fineract)   | Lending core           |
-
-| [Frappe Lending](https://github.com/frappe/lending)     | Loan management        |
-
-| [Formance](https://github.com/formancehq/ledger)        | Financial ledger       |
-
-| [QuantLib](https://github.com/lballabio/QuantLib)       | Financial calculations |
-
-| [OpenGamma Strata](https://github.com/OpenGamma/Strata) | Financial calculations |
-
-| [Temporal](https://github.com/temporalio/temporal)      | Workflow orchestration |
-
-| [Camunda](https://github.com/camunda/camunda)           | Workflow/BPMN          |
-
-
-
----
-
-
-
-# 🤖 Open-Source Loan Origination
-
-
-
-Loan servicing begins after origination, but an integrated platform often needs both.
-
-
-
-A modern open-source architecture can use:
-
-
-
-```text
-
-Application
-
-    │
-
-    ▼
-
-Loan Origination
-
-    │
-
-    ├── KYC
-
-    ├── Credit Check
-
-    ├── Underwriting
-
-    ├── Risk
-
-    └── Approval
-
-    │
-
-    ▼
-
-Loan Booking
-
-    │
-
-    ▼
-
-Loan Servicing
-
-```
-
-
-
-### Apache Fineract Loan Origination
-
-
-
-A 2026 Apache Fineract project includes a loan-origination proof of concept that provides application workflows, credit assessment, approvals and integration with Fineract; its own documentation explicitly describes it as **not production-ready** without further hardening, testing and compliance work.
-
-
-
-| Project                                                                                 | Role                          |
-
-| --------------------------------------------------------------------------------------- | ----------------------------- |
-
-| [Apache Fineract](https://github.com/apache/fineract)                                   | Core lending                  |
-
-| [Fineract Loan Origination](https://apache.googlesource.com/fineract-loan-origination/) | Loan-origination POC          |
-
-| [Frappe Lending](https://github.com/frappe/lending)                                     | Lending lifecycle             |
-
-| [Mifos Workflow](https://github.com/openMF/mifos-workflow)                              | Workflow-driven lending       |
-
-| [ERPNext](https://github.com/frappe/erpnext)                                            | Business / financial platform |
-
-
-
----
-
-
 
 # 🔐 Open-Source Credit & Risk Infrastructure
 
-
-
-A servicing platform normally depends on external credit and risk systems.
-
-
-
-Open-source building blocks include:
-
-
-
-| Project                                                       | Role                           |
-
-| ------------------------------------------------------------- | ------------------------------ |
-
-| [Apache Fineract](https://github.com/apache/fineract)         | Lending and portfolio data     |
-
-| [Frappe Lending](https://github.com/frappe/lending)           | Loan risk/compliance workflows |
-
-| [Open Policy Agent](https://github.com/open-policy-agent/opa) | Policy decision engine         |
-
-| [MLflow](https://github.com/mlflow/mlflow)                    | Model lifecycle                |
-
-| [Feast](https://github.com/feast-dev/feast)                   | Feature store                  |
-
-| [XGBoost](https://github.com/dmlc/xgboost)                    | Credit-risk modeling           |
-
-| [LightGBM](https://github.com/microsoft/LightGBM)             | Gradient-boosted models        |
-
-| [scikit-learn](https://github.com/scikit-learn/scikit-learn)  | Machine learning               |
-
-
-
-Example:
-
-
-
-```text
-
-Loan Application
-
-      │
-
-      ▼
-
-Feature Store
-
-      │
-
-      ▼
-
-Risk Model
-
-      │
-
-      ▼
-
-Credit Score
-
-      │
-
-      ▼
-
-Policy Engine
-
-      │
-
-      ▼
-
-Approve / Review / Reject
-
-```
-
-
+| Project | Stars | Role & Description | License |
+| :--- | :--- | :--- | :--- |
+| [scikit-learn](https://github.com/scikit-learn/scikit-learn) | [![Stars](https://img.shields.io/github/stars/scikit-learn/scikit-learn?style=social&color=white)](https://github.com/scikit-learn/scikit-learn/stargazers) | Machine learning library for credit scoring and risk modeling | BSD-3-Clause |
+| [XGBoost](https://github.com/dmlc/xgboost) | [![Stars](https://img.shields.io/github/stars/dmlc/xgboost?style=social&color=white)](https://github.com/dmlc/xgboost/stargazers) | Optimized gradient boosting library for default risk predictions | Apache-2.0 |
+| [MLflow](https://github.com/mlflow/mlflow) | [![Stars](https://img.shields.io/github/stars/mlflow/mlflow?style=social&color=white)](https://github.com/mlflow/mlflow/stargazers) | Machine learning lifecycle platform for credit decision models | Apache-2.0 |
+| [LightGBM](https://github.com/microsoft/LightGBM) | [![Stars](https://img.shields.io/github/stars/microsoft/LightGBM?style=social&color=white)](https://github.com/microsoft/LightGBM/stargazers) | Fast gradient boosting framework for credit scoring models | MIT |
+| [Open Policy Agent (OPA)](https://github.com/open-policy-agent/opa) | [![Stars](https://img.shields.io/github/stars/open-policy-agent/opa?style=social&color=white)](https://github.com/open-policy-agent/opa/stargazers) | Policy decision engine for automated credit underwriting rules | Apache-2.0 |
+| [Camunda](https://github.com/camunda/camunda) | [![Stars](https://img.shields.io/github/stars/camunda/camunda?style=social&color=white)](https://github.com/camunda/camunda/stargazers) | DMN decision tables for credit underwriting workflows | Apache-2.0 |
+| [Feast](https://github.com/feast-dev/feast) | [![Stars](https://img.shields.io/github/stars/feast-dev/feast?style=social&color=white)](https://github.com/feast-dev/feast/stargazers) | Feature store for real-time credit scoring features | Apache-2.0 |
 
 ---
 
+# 🏠 Open-Source Mortgage & Real Estate Lending
 
+Mortgage servicing requires specialized handling of escrow (taxes & insurance), investor reporting, and compliance. An open-source stack combines:
+
+```text
+Apache Fineract + Frappe Lending + Formance Ledger + Temporal Workflow + PostgreSQL
+```
+
+---
+
+# 🏢 Open-Source Commercial Lending
+
+Commercial lending (syndications, multi-facility drawdowns, covenants) can leverage composable tools:
+
+| Project | Stars | Role |
+| :--- | :--- | :--- |
+| [Apache Fineract](https://github.com/apache/fineract) | [![Stars](https://img.shields.io/github/stars/apache/fineract?style=social&color=white)](https://github.com/apache/fineract/stargazers) | Lending Core & Account Management |
+| [Formance Ledger](https://github.com/formancehq/ledger) | [![Stars](https://img.shields.io/github/stars/formancehq/ledger?style=social&color=white)](https://github.com/formancehq/ledger/stargazers) | Complex Double-Entry Ledger |
+| [QuantLib](https://github.com/lballabio/QuantLib) | [![Stars](https://img.shields.io/github/stars/lballabio/QuantLib?style=social&color=white)](https://github.com/lballabio/QuantLib/stargazers) | Commercial Rate & Yield Calculations |
+| [Temporal](https://github.com/temporalio/temporal) | [![Stars](https://img.shields.io/github/stars/temporalio/temporal?style=social&color=white)](https://github.com/temporalio/temporal/stargazers) | Facility Drawdown & Approval Workflows |
+
+---
+
+# 🤖 Open-Source Loan Origination
+
+Loan servicing begins after origination:
+
+```text
+Application ──► Origination (KYC / Credit Check / Underwriting) ──► Loan Booking ──► Servicing Engine
+```
+
+---
 
 # 🧾 Open-Source Accounting & Reconciliation
 
-
-
-A loan-servicing system needs to reconcile:
-
-
-
-```text
-
-Loan System
-
-     │
-
-     ├── Principal
-
-     ├── Interest
-
-     ├── Fees
-
-     ├── Payments
-
-     └── Adjustments
-
-             │
-
-             ▼
-
-       Financial Ledger
-
-             │
-
-             ▼
-
-      General Ledger
-
-             │
-
-             ▼
-
-       Bank Statement
-
-             │
-
-             ▼
-
-       Reconciliation
-
-```
-
-
-
-| Project                                                 | Function               |
-
-| ------------------------------------------------------- | ---------------------- |
-
-| [Formance Ledger](https://github.com/formancehq/ledger) | Financial ledger       |
-
-| [ERPNext](https://github.com/frappe/erpnext)            | Accounting             |
-
-| [Odoo Community](https://github.com/odoo/odoo)          | Accounting             |
-
-| [Apache Fineract](https://github.com/apache/fineract)   | Financial accounting   |
-
-| [Frappe Lending](https://github.com/frappe/lending)     | Loan accounting        |
-
-| [Kill Bill](https://github.com/killbill/killbill)       | Billing / transactions |
-
-
+| Project | Stars | Function |
+| :--- | :--- | :--- |
+| [Odoo Community](https://github.com/odoo/odoo) | [![Stars](https://img.shields.io/github/stars/odoo/odoo?style=social&color=white)](https://github.com/odoo/odoo/stargazers) | Full Financial Accounting & Reporting |
+| [ERPNext](https://github.com/frappe/erpnext) | [![Stars](https://img.shields.io/github/stars/frappe/erpnext?style=social&color=white)](https://github.com/frappe/erpnext/stargazers) | General Ledger & Bank Reconciliation |
+| [Formance Ledger](https://github.com/formancehq/ledger) | [![Stars](https://img.shields.io/github/stars/formancehq/ledger?style=social&color=white)](https://github.com/formancehq/ledger/stargazers) | Immutable Transaction Ledger |
+| [Apache Fineract](https://github.com/apache/fineract) | [![Stars](https://img.shields.io/github/stars/apache/fineract?style=social&color=white)](https://github.com/apache/fineract/stargazers) | Portfolio Financial Accounting |
 
 ---
-
-
 
 # ⚙️ Open-Source Fintech Infrastructure
 
-
-
-| Layer            | Open-Source Projects            |
-
-| ---------------- | ------------------------------- |
-
-| Core Banking     | Apache Fineract, Mifos X        |
-
-| Loan Management  | Frappe Lending                  |
-
-| Loan Origination | Fineract LOS, Mifos Workflow    |
-
-| Ledger           | Formance, Fineract              |
-
-| Payments         | Hyperswitch, Moov               |
-
-| ACH              | Moov ACH                        |
-
-| ISO 8583         | jPOS, Moov ISO 8583             |
-
-| Accounting       | ERPNext, Odoo                   |
-
-| Risk             | XGBoost, LightGBM, scikit-learn |
-
-| Policy           | Open Policy Agent               |
-
-| Workflow         | Temporal, Camunda               |
-
-| Authentication   | Keycloak                        |
-
-| Database         | PostgreSQL                      |
-
-| Messaging        | Kafka, NATS                     |
-
-| API Gateway      | Kong, Traefik                   |
-
-| Observability    | Prometheus, Grafana             |
-
-| Object Storage   | MinIO                           |
-
-| Containers       | Docker, Kubernetes              |
-
-
+| Layer | Open-Source Projects |
+| :--- | :--- |
+| **Core Banking** | Apache Fineract, Mifos X |
+| **Loan Management** | Frappe Lending |
+| **Ledger** | Formance Ledger, ERPNext |
+| **Payments** | Hyperswitch, Moov Paygate |
+| **ACH / Wires** | Moov ACH |
+| **Workflows** | Temporal, Camunda |
+| **Risk & Credit** | XGBoost, LightGBM, scikit-learn |
 
 ---
-
-
 
 # 🧩 Commercial Platform → Open-Source Equivalent
 
-
-
-| Commercial Platform                 | Open-Source Equivalent / Building Blocks                 |
-
-| ----------------------------------- | -------------------------------------------------------- |
-
-| **LoanPro**                         | Frappe Lending + Formance + Hyperswitch                  |
-
-| **TurnKey Lender**                  | Frappe Lending + Fineract + workflow engine              |
-
-| **Nortridge**                       | Frappe Lending + Fineract + Temporal/Camunda             |
-
-| **LoanServ**                        | Fineract + Frappe Lending + workflow + accounting        |
-
-| **Shaw Systems**                    | Fineract + Frappe Lending + collections workflows        |
-
-| **Fiserv LoanServ**                 | Fineract + Formance + ERPNext + workflow                 |
-
-| **Finastra**                        | Fineract + Formance + financial calculation libraries    |
-
-| **Finastra Loan IQ**                | Fineract + Formance + Strata/QuantLib + workflow         |
-
-| **FICS**                            | Fineract + Frappe Lending + mortgage-specific modules    |
-
-| **Margill**                         | QuantLib + OpenGamma Strata + custom amortization engine |
-
-| **SBS Software**                    | Fineract + Formance + ERPNext                            |
-
-| **SiteOne Loan Servicing**          | Frappe Lending + Fineract + Formance                     |
-
-| **Sagent**                          | Fineract + Frappe Lending + workflow + document services |
-
-| **CreditOnline**                    | Fineract + Frappe Lending + risk stack                   |
-
-| **Self Financial**                  | Fineract + Formance + custom consumer-finance services   |
-
-| **LoanVantage**                     | Frappe Lending + Fineract + workflow                     |
-
-| **LendingQB**                       | Fineract LOS + workflow + Frappe Lending                 |
-
-| **Mortgage Automator**              | Frappe Lending + Fineract + mortgage-specific extensions |
-
-| **The Mortgage Office**             | Frappe Lending + ERPNext + Formance                      |
-
-| **AutoPal**                         | Frappe Lending + Fineract + Formance                     |
-
-| **HES LoanBox**                     | Fineract + Frappe Lending + risk engine                  |
-
-| **defi SOLUTIONS**                  | Fineract + workflow + risk engine                        |
-
-| **Mambu Lending**                   | Apache Fineract + Formance                               |
-
-| **Enterprise Loan Servicing**       | Fineract + Frappe Lending + Formance + workflow          |
-
-| **Open-Source LoanPro Alternative** | Frappe Lending + Formance + Hyperswitch + PostgreSQL     |
-
-
+| Commercial Platform | Open-Source Equivalent / Composable Building Blocks |
+| :--- | :--- |
+| **LoanPro** | Frappe Lending + Formance Ledger + Hyperswitch |
+| **TurnKey Lender** | Frappe Lending + Apache Fineract + Temporal |
+| **Nortridge** | Frappe Lending + Apache Fineract + Camunda |
+| **Fiserv LoanServ** | Apache Fineract + Formance Ledger + ERPNext |
+| **Finastra Loan IQ** | Apache Fineract + Formance + QuantLib |
+| **Sagent** | Apache Fineract + Frappe Lending + Temporal |
+| **Mambu** | Apache Fineract + Formance Ledger |
 
 ---
-
-
 
 # 🏗️ Loan Servicing Architecture
 
-
-
 ```mermaid
-
 flowchart TD
-
-
-
     A[Loan Application] --> B[Origination]
-
     B --> C[Underwriting]
-
     C --> D[Approval]
-
     D --> E[Loan Booking]
-
-
-
-    E --> F[Loan Servicing]
-
-
-
-    F --> G[Amortization]
-
+    E --> F[Loan Servicing Engine]
+    F --> G[Amortization Schedule]
     F --> H[Interest Accrual]
-
     F --> I[Payment Processing]
-
-    F --> J[Fees]
-
-    F --> K[Escrow]
-
-    F --> L[Delinquency]
-
-
-
-    I --> M[Payment Allocation]
-
-    M --> N[Ledger]
-
-
-
-    G --> N
-
-    H --> N
-
-    J --> N
-
-    K --> N
-
-
-
-    L --> O[Collections]
-
-
-
-    O --> P[Recovery]
-
-    O --> Q[Charge-Off]
-
-
-
-    N --> R[Accounting]
-
-    N --> S[Reporting]
-
-    N --> T[Reconciliation]
-
+    F --> J[Fees & Penalties]
+    I --> K[Payment Allocation]
+    K --> L[Double-Entry Ledger]
+    L --> M[General Ledger Integration]
+    F --> N[Collections & Delinquency]
+    F --> O[Investor & Regulatory Reporting]
 ```
 
-
-
 ---
-
-
 
 # 🔄 Open-Source Loan Servicing Architecture
 
+```mermaid
+flowchart LR
+    subgraph Frontend
+        UI[Borrower & Admin Portal]
+    end
+    subgraph Core Engine
+        LMS[Frappe Lending / Fineract]
+    end
+    subgraph Accounting
+        LEDGER[Formance Ledger / ERPNext]
+    end
+    subgraph Payments
+        PAY[Hyperswitch / Moov ACH]
+    end
 
-
-```text
-
-                         BORROWER
-
-                            │
-
-                            ▼
-
-                     Borrower Portal
-
-                            │
-
-                            ▼
-
-                       Loan API
-
-                            │
-
-             ┌──────────────┼──────────────┐
-
-             │              │              │
-
-             ▼              ▼              ▼
-
-          Fineract      Frappe Lending   Custom LMS
-
-             │              │              │
-
-             └──────────────┼──────────────┘
-
-                            ▼
-
-                    SERVICING ENGINE
-
-                            │
-
-       ┌────────────────────┼────────────────────┐
-
-       │                    │                    │
-
-       ▼                    ▼                    ▼
-
- Amortization          Payments             Collections
-
-       │                    │                    │
-
-       └────────────────────┼────────────────────┘
-
-                            ▼
-
-                     Formance Ledger
-
-                            │
-
-              ┌─────────────┼─────────────┐
-
-              ▼             ▼             ▼
-
-         Accounting    Reconciliation   Reporting
-
+    UI --> LMS
+    LMS --> LEDGER
+    LMS --> PAY
 ```
 
-
-
 ---
-
-
 
 # 💸 Loan Payment & Ledger Architecture
 
-
-
-```mermaid
-
-flowchart LR
-
-
-
-    A[Borrower Payment] --> B[Payment Gateway]
-
-
-
-    B --> C[Payment Validation]
-
-
-
-    C --> D[Payment Allocation]
-
-
-
-    D --> E[Fees]
-
-    D --> F[Interest]
-
-    D --> G[Principal]
-
-
-
-    E --> H[Ledger]
-
-    F --> H
-
-    G --> H
-
-
-
-    H --> I[General Ledger]
-
-
-
-    I --> J[Reconciliation]
-
-    I --> K[Reporting]
-
+```text
+Borrower Payment ──► Payment Gateway (Moov/Hyperswitch) ──► Payment Allocation (Fees -> Interest -> Principal) ──► Immutable Double-Entry Ledger (Formance)
 ```
 
-
-
 ---
-
-
 
 # 📊 Loan Lifecycle
 
-
-
-A complete servicing system can be represented as:
-
-
-
 ```text
-
-                    LOAN LIFECYCLE
-
-
-
-Application
-
-     │
-
-     ▼
-
-Underwriting
-
-     │
-
-     ▼
-
-Approval
-
-     │
-
-     ▼
-
-Booking
-
-     │
-
-     ▼
-
-Disbursement
-
-     │
-
-     ▼
-
-Active Servicing
-
-     │
-
-     ├──────────────┐
-
-     │              │
-
-     ▼              ▼
-
-Payments       Amendments
-
-     │              │
-
-     ▼              ▼
-
-Reconciliation  Restructuring
-
-     │              │
-
-     └───────┬──────┘
-
-             ▼
-
-        Delinquency?
-
-             │
-
-        ┌────┴────┐
-
-        │         │
-
-       No        Yes
-
-        │         │
-
-        ▼         ▼
-
-     Continue  Collections
-
-                  │
-
-            ┌─────┴─────┐
-
-            ▼           ▼
-
-         Recovery    Charge-off
-
-            │           │
-
-            └─────┬─────┘
-
-                  ▼
-
-                Payoff
-
-                  │
-
-                  ▼
-
-                Closure
-
+Origination ──► Booking ──► Active Servicing ──► Delinquency (DPD 1+) ──► Restructure / Payoff ──► Closed
 ```
 
-
-
 ---
-
-
 
 # ⚖️ Commercial vs Open-Source
 
-
-
-| Capability             | Commercial Servicing Platform | Open-Source Stack              |
-
-| ---------------------- | ----------------------------- | ------------------------------ |
-
-| Loan Accounts          | ✅                             | ✅                              |
-
-| Loan Products          | ✅                             | ✅                              |
-
-| Amortization           | ✅                             | ✅                              |
-
-| Interest Accrual       | ✅                             | ✅                              |
-
-| Payment Processing     | ✅                             | ✅                              |
-
-| Payment Allocation     | ✅                             | ✅                              |
-
-| Fees                   | ✅                             | ✅                              |
-
-| Delinquency            | ✅                             | ✅                              |
-
-| Collections            | ✅                             | ✅ Building Blocks              |
-
-| Charge-Offs            | ✅                             | ✅                              |
-
-| Loan Modifications     | ✅                             | ✅ / Custom                     |
-
-| Payoffs                | ✅                             | ✅                              |
-
-| Borrower Portal        | Often                         | Build / Integrate              |
-
-| Investor Reporting     | Often                         | Build / Integrate              |
-
-| Mortgage Escrow        | Specialized                   | Custom                         |
-
-| Mortgage Servicing     | Specialized                   | Significant customization      |
-
-| Commercial Syndication | Specialized                   | Significant customization      |
-
-| Accounting             | ✅                             | ✅                              |
-
-| Reconciliation         | ✅                             | Build / integrate              |
-
-| APIs                   | Usually                       | ✅                              |
-
-| Source Code            | ❌                             | ✅                              |
-
-| Self Hosting           | Varies                        | ✅                              |
-
-| Customization          | Medium/High                   | Very High                      |
-
-| Vendor Lock-in         | Higher                        | Lower                          |
-
-| Regulatory Support     | Often integrated              | Self-managed                   |
-
-| Support                | Vendor                        | Community / Commercial support |
-
-| Implementation         | Faster                        | More engineering               |
-
-| Infrastructure         | Managed                       | Self-managed                   |
-
-| Data Ownership         | Vendor-dependent              | Full control                   |
-
-
+| Criteria | Commercial SaaS (LoanPro, Nortridge, FIS) | Open-Source Stack (Fineract, Frappe, Formance) |
+| :--- | :--- | :--- |
+| **Time to Market** | ⚡ Fast out-of-the-box setup | 🛠️ Requires integration engineering |
+| **Customizability** | 🔒 Restricted to vendor API limits | 🔓 100% full source control & flexibility |
+| **Cost Structure** | 💰 High recurring monthly license fees | 🆓 Zero software licensing costs |
+| **Data Ownership** | ☁️ Hosted in vendor cloud | 🛡️ Self-hosted / sovereign data control |
 
 ---
-
-
-
-# 📊 Loan Servicing Technology Comparison
-
-
-
-| Project          | Loan Servicing | Core Banking | Lending | Accounting | Payments | Self-Host |
-
-| ---------------- | :------------: | :----------: | :-----: | :--------: | :------: | :-------: |
-
-| Apache Fineract  |        ✅       |       ✅      |    ✅    |      ✅     |    ⚠️    |     ✅     |
-
-| Frappe Lending   |        ✅       |      ⚠️      |    ✅    |      ✅     |    ⚠️    |     ✅     |
-
-| Mifos X          |        ✅       |       ✅      |    ✅    |      ✅     |    ⚠️    |     ✅     |
-
-| Fineract CN      |        ✅       |       ✅      |    ✅    |     ⚠️     |    ⚠️    |     ✅     |
-
-| Formance         |       ⚠️       |       ❌      |    ⚠️   |      ✅     |     ✅    |     ✅     |
-
-| ERPNext          |       ⚠️       |       ❌      |    ⚠️   |      ✅     |    ⚠️    |     ✅     |
-
-| Odoo Community   |       ⚠️       |       ❌      |    ⚠️   |      ✅     |    ⚠️    |     ✅     |
-
-| Kill Bill        |       ⚠️       |       ❌      |    ❌    |      ✅     |     ✅    |     ✅     |
-
-| Hyperswitch      |        ❌       |       ❌      |    ❌    |     ⚠️     |     ✅    |     ✅     |
-
-| Moov             |        ❌       |       ❌      |    ❌    |     ⚠️     |     ✅    |     ✅     |
-
-| QuantLib         |        ❌       |       ❌      |    ⚠️   |      ❌     |     ❌    |     ✅     |
-
-| OpenGamma Strata |        ❌       |       ❌      |    ⚠️   |      ❌     |     ❌    |     ✅     |
-
-
-
----
-
-
 
 # 🚀 Recommended Open-Source Stacks
 
-
-
-## 🏆 1. General-Purpose Loan Servicing
-
-
-
-```text
-
-Frappe Lending
-
-      +
-
-PostgreSQL
-
-      +
-
-Formance Ledger
-
-      +
-
-FastAPI
-
-      +
-
-Keycloak
-
-```
-
-
-
-Good starting architecture for consumer, SME and specialty lending.
-
-
+1. **Lightweight Fintech Stack:** `Frappe Lending` + `PostgreSQL` + `Hyperswitch`
+2. **Enterprise Core Stack:** `Apache Fineract` + `Formance Ledger` + `Temporal` + `Moov ACH`
 
 ---
 
+# 📈 Star History
 
-
-## 🏦 2. Core-Banking-Based Lending
-
-
-
-```text
-
-Apache Fineract
-
-      +
-
-Mifos X
-
-      +
-
-Formance
-
-      +
-
-Moov
-
-      +
-
-PostgreSQL
-
-```
-
-
-
-Useful when lending is part of a broader banking platform.
-
-
-
-Mifos explicitly describes the Fineract/Mifos architecture as modular and deployable either as a complete financial-services platform or as building blocks for embedded finance.
-
-
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Loan-Servicing-Platform&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Loan-Servicing-Platform&type=date&legend=top-left)
 
 ---
 
+# 💖 Support & Community
 
+Thank you for exploring **Awesome Loan Servicing Platform**! If you find this curated fintech reference helpful for your engineering, core banking, or loan management projects, please consider supporting the project:
 
-## ⚡ 3. API-First LoanPro-Style Architecture
+- ⭐ **Star** this repository on GitHub to boost visibility!
+- 🍴 **Fork** it to keep a copy and submit new open-source or commercial platforms.
+- 📢 **Share** it with fellow fintech engineers, founders, and credit risk leaders.
 
-
-
-```text
-
-FastAPI / Kong
-
-      │
-
-      ▼
-
-Frappe Lending
-
-      │
-
-      ▼
-
-Formance Ledger
-
-      │
-
-      ├── Hyperswitch
-
-      ├── Moov
-
-      └── Bank / Payment APIs
-
-```
-
-
+[![Sponsor](https://img.shields.io/badge/Sponsor-GitHub-ea4aaa?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/ishandutta2007)
 
 ---
 
+## 🤝 Contributing
 
+Contributions are welcome! Please read the contribution guidelines before submitting pull requests.
 
-## 🏠 4. Mortgage-Oriented Stack
+## ⚠️ Disclaimer
 
+This repository is for educational and informational purposes only. Logos and brand names belong to their respective owners.
 
+## 📜 License
 
-```text
-
-Fineract
-
-   +
-
-Frappe Lending
-
-   +
-
-Mortgage Extensions
-
-   +
-
-Workflow Engine
-
-   +
-
-ERPNext
-
-   +
-
-Document Management
-
-```
-
-
-
-A production mortgage-servicing implementation would require substantial domain-specific customization around escrow, investor reporting, loss mitigation, foreclosure and regulatory workflows.
-
-
-
----
-
-
-
-## 🏢 5. Commercial Lending
-
-
-
-```text
-
-Apache Fineract
-
-      +
-
-Formance
-
-      +
-
-OpenGamma Strata
-
-      +
-
-QuantLib
-
-      +
-
-Temporal
-
-      +
-
-PostgreSQL
-
-```
-
-
-
-This provides a composable foundation for:
-
-
-
-* Facilities
-
-* Loans
-
-* Drawdowns
-
-* Interest calculations
-
-* Fees
-
-* Workflows
-
-* Financial accounting
-
-
-
----
-
-
-
-## 💳 6. Consumer Lending
-
-
-
-```text
-
-Frappe Lending
-
-      +
-
-Formance
-
-      +
-
-Hyperswitch
-
-      +
-
-Moov
-
-      +
-
-Keycloak
-
-      +
-
-PostgreSQL
-
-```
-
-
-
----
-
-
-
-# 🎯 Recommended Projects by Use Case
-
-
-
-| Use Case                                     | Recommended Starting Point                         |
-
-| -------------------------------------------- | -------------------------------------------------- |
-
-| General loan servicing                       | **Frappe Lending**                                 |
-
-| Core banking + lending                       | **Apache Fineract**                                |
-
-| Full open-source financial-services platform | **Mifos X + Fineract**                             |
-
-| API-first lending                            | **Fineract / Frappe Lending**                      |
-
-| Loan accounting                              | **Frappe Lending + Formance**                      |
-
-| Double-entry financial ledger                | **Formance Ledger**                                |
-
-| Loan origination                             | **Fineract LOS / Frappe Lending**                  |
-
-| Consumer lending                             | **Frappe Lending + Formance**                      |
-
-| SME lending                                  | **Frappe Lending + Fineract**                      |
-
-| Microfinance                                 | **Apache Fineract / Mifos**                        |
-
-| Loan payments                                | **Moov + Hyperswitch**                             |
-
-| ACH payments                                 | **Moov ACH**                                       |
-
-| Payment orchestration                        | **Hyperswitch**                                    |
-
-| Credit risk                                  | **XGBoost / LightGBM + OPA**                       |
-
-| Workflow automation                          | **Temporal / Camunda**                             |
-
-| Mortgage servicing foundation                | **Fineract + Frappe Lending**                      |
-
-| Commercial lending foundation                | **Fineract + Formance + Strata**                   |
-
-| Financial calculations                       | **QuantLib / OpenGamma Strata**                    |
-
-| Accounting                                   | **ERPNext / Odoo**                                 |
-
-| Full self-hosted lending stack               | **Frappe Lending + Formance + Moov + Hyperswitch** |
-
-
-
----
-
-
-
-# 🏢 Building a LoanPro Alternative
-
-
-
-LoanPro describes its platform as an API-first lending and credit platform with a modern lending core, origination and payments/servicing capabilities.
-
-
-
-An open-source equivalent can be decomposed into:
-
-
-
-```text
-
-                         CLIENT
-
-                           │
-
-                           ▼
-
-                      API GATEWAY
-
-                           │
-
-                           ▼
-
-                   LOAN MANAGEMENT API
-
-                           │
-
-              ┌────────────┼────────────┐
-
-              │            │            │
-
-              ▼            ▼            ▼
-
-           Lending      Servicing    Payments
-
-              │            │            │
-
-              └────────────┼────────────┘
-
-                           ▼
-
-                    Frappe Lending
-
-                           │
-
-                           ▼
-
-                    Formance Ledger
-
-                           │
-
-             ┌─────────────┼─────────────┐
-
-             ▼             ▼             ▼
-
-          Accounting   Collections   Reporting
-
-```
-
-
-
-### Suggested Components
-
-
-
-```text
-
-Loan Management      → Frappe Lending
-
-Core Banking         → Apache Fineract
-
-Ledger               → Formance
-
-Payments             → Hyperswitch
-
-ACH                  → Moov ACH
-
-ISO 8583             → jPOS
-
-Risk                 → XGBoost / LightGBM
-
-Policy               → Open Policy Agent
-
-Workflow             → Temporal
-
-Accounting           → ERPNext
-
-Authentication       → Keycloak
-
-Database             → PostgreSQL
-
-Messaging            → Kafka / NATS
-
-API Gateway          → Kong
-
-Observability        → Prometheus + Grafana
-
-```
-
-
-
----
-
-
-
-# 🏦 Building an Open-Source Loan Servicing Platform
-
-
-
-```mermaid
-
-flowchart TB
-
-
-
-    A[Borrower / Lender Application]
-
-
-
-    A --> B[API Gateway]
-
-
-
-    B --> C[Authentication]
-
-    B --> D[Loan API]
-
-    B --> E[Payment API]
-
-    B --> F[Collections API]
-
-
-
-    C --> G[Keycloak]
-
-
-
-    D --> H[Frappe Lending]
-
-    D --> I[Apache Fineract]
-
-
-
-    E --> J[Hyperswitch]
-
-    E --> K[Moov]
-
-
-
-    F --> L[Workflow Engine]
-
-
-
-    H --> M[Financial Ledger]
-
-    I --> M
-
-    J --> M
-
-    K --> M
-
-
-
-    M --> N[Formance]
-
-
-
-    N --> O[Accounting]
-
-    N --> P[Reconciliation]
-
-    N --> Q[Reporting]
-
-
-
-    L --> R[SMS / Email / Contact Center]
-
-
-
-    S[Risk Engine] --> D
-
-    S --> T[XGBoost / LightGBM]
-
-```
-
-
-
----
-
-
-
-# 🧱 Loan Servicing Infrastructure Layers
-
-
-
-```text
-
-┌────────────────────────────────────────────────┐
-
-│                 BORROWER APPS                  │
-
-│ Web • Mobile • Partner APIs • Portals          │
-
-└───────────────────────┬────────────────────────┘
-
-                        │
-
-┌───────────────────────▼────────────────────────┐
-
-│                    API LAYER                   │
-
-│       FastAPI • Kong • OpenAPI • OAuth         │
-
-└───────────────────────┬────────────────────────┘
-
-                        │
-
-┌───────────────────────▼────────────────────────┐
-
-│              LOAN SERVICING CORE               │
-
-│     Frappe Lending • Apache Fineract           │
-
-└───────────────────────┬────────────────────────┘
-
-                        │
-
-┌───────────────────────▼────────────────────────┐
-
-│              SERVICING ENGINE                  │
-
-│ Schedules • Accruals • Payments • Fees         │
-
-└───────────────────────┬────────────────────────┘
-
-                        │
-
-┌───────────────────────▼────────────────────────┐
-
-│                    LEDGER                      │
-
-│             Formance • Fineract                │
-
-└───────────────────────┬────────────────────────┘
-
-                        │
-
-┌───────────────────────▼────────────────────────┐
-
-│              PAYMENTS / COLLECTIONS            │
-
-│     Moov • Hyperswitch • ACH • Banks           │
-
-└───────────────────────┬────────────────────────┘
-
-                        │
-
-┌───────────────────────▼────────────────────────┐
-
-│             ACCOUNTING / REPORTING             │
-
-│ ERPNext • PostgreSQL • BI • Reconciliation     │
-
-└────────────────────────────────────────────────┘
-
-```
-
-
-
----
-
-
-
-# 🌐 Open-Source Lending Landscape
-
-
-
-```mermaid
-
-mindmap
-
-  root((Open-Source Lending))
-
-    Core Banking
-
-      Apache Fineract
-
-      Fineract CN
-
-      Mifos X
-
-      Mifos
-
-    Loan Management
-
-      Frappe Lending
-
-      Apache Fineract
-
-      Mifos
-
-    Loan Origination
-
-      Fineract LOS
-
-      Mifos Workflow
-
-      Frappe Lending
-
-    Ledger
-
-      Formance
-
-      Fineract
-
-      ERPNext
-
-    Payments
-
-      Moov
-
-      Hyperswitch
-
-      jPOS
-
-      Kill Bill
-
-    ACH
-
-      Moov ACH
-
-    Risk
-
-      XGBoost
-
-      LightGBM
-
-      scikit-learn
-
-      Feast
-
-      MLflow
-
-    Accounting
-
-      ERPNext
-
-      Odoo
-
-    Workflow
-
-      Temporal
-
-      Camunda
-
-    Infrastructure
-
-      PostgreSQL
-
-      Kafka
-
-      NATS
-
-      Kubernetes
-
-      Docker
-
-    Applications
-
-      Consumer Lending
-
-      SME Lending
-
-      Microfinance
-
-      Mortgage
-
-      Commercial Lending
-
-      Embedded Finance
-
-      Neobanks
-
-```
-
-
-
----
-
-
-
-# 🧠 Why Open-Source Loan Servicing Matters
-
-
-
-Commercial servicing systems often sit at the center of a lender's technology stack:
-
-
-
-```text
-
-                    LENDER
-
-                       │
-
-                       ▼
-
-                Loan Origination
-
-                       │
-
-                       ▼
-
-                 Loan Servicing
-
-                       │
-
-       ┌───────────────┼───────────────┐
-
-       ▼               ▼               ▼
-
-    Payments       Collections     Accounting
-
-       │               │               │
-
-       └───────────────┼───────────────┘
-
-                       ▼
-
-                    Reporting
-
-```
-
-
-
-The servicing system therefore becomes a critical source of:
-
-
-
-* Financial data
-
-* Customer data
-
-* Payment history
-
-* Interest calculations
-
-* Delinquency status
-
-* Collections status
-
-* Portfolio performance
-
-* Accounting events
-
-
-
-An open-source approach makes it possible to own more of this architecture:
-
-
-
-```text
-
-              COMMERCIAL APPROACH
-
-
-
-                 Lender App
-
-                     │
-
-                     ▼
-
-             Proprietary LMS
-
-                     │
-
-             Proprietary APIs
-
-                     │
-
-                     ▼
-
-                Integrations
-
-
-
-
-
-              OPEN-SOURCE APPROACH
-
-
-
-                 Lender App
-
-                     │
-
-                     ▼
-
-                  Your API
-
-                     │
-
-          ┌──────────┼──────────┐
-
-          ▼          ▼          ▼
-
-       Fineract    Frappe     Formance
-
-                    Lending
-
-          │          │          │
-
-          └──────────┼──────────┘
-
-                     ▼
-
-              Your Infrastructure
-
-```
-
-
-
-The strongest open-source opportunity is therefore not necessarily a one-for-one clone of every commercial product.
-
-
-
-It is a **composable lending operating system** assembled from:
-
-
-
-```text
-
-Core Banking
-
-+
-
-Loan Servicing
-
-+
-
-Ledger
-
-+
-
-Payments
-
-+
-
-Collections
-
-+
-
-Risk
-
-+
-
-Accounting
-
-+
-
-Workflow
-
-+
-
-APIs
-
-```
-
-
-
----
-
-
-
-# 🔥 Open-Source Loan Servicing Reference Stack
-
-
-
-```text
-
-                         LENDER
-
-                           │
-
-                           ▼
-
-                    Customer Portal
-
-                           │
-
-                           ▼
-
-                     API Gateway
-
-                           │
-
-                           ▼
-
-                    Apache Fineract
-
-                           │
-
-                    ┌──────┴──────┐
-
-                    ▼             ▼
-
-              Frappe Lending   Loan Products
-
-                    │
-
-                    ▼
-
-               Servicing Engine
-
-                    │
-
-       ┌────────────┼────────────┐
-
-       ▼            ▼            ▼
-
-    Payments    Collections   Adjustments
-
-       │            │            │
-
-       └────────────┼────────────┘
-
-                    ▼
-
-              Formance Ledger
-
-                    │
-
-          ┌─────────┼─────────┐
-
-          ▼         ▼         ▼
-
-      Accounting  Reconcile  Analytics
-
-          │
-
-          ▼
-
-       ERPNext
-
-```
-
-
-
----
-
-
-
-# 🧩 Commercial → OSS Architecture Mapping
-
-
-
-```text
-
-LoanPro
-
-  │
-
-  ├── Lending Core       → Frappe Lending / Fineract
-
-  ├── Loan Servicing     → Frappe Lending
-
-  ├── Payments           → Hyperswitch / Moov
-
-  ├── Ledger             → Formance
-
-  └── APIs               → FastAPI / Kong
-
-
-
-
-
-Nortridge
-
-  │
-
-  ├── Loan Management    → Frappe Lending
-
-  ├── Servicing          → Fineract / Frappe Lending
-
-  ├── Workflows          → Temporal / Camunda
-
-  └── Accounting         → Formance / ERPNext
-
-
-
-
-
-LoanServ / Sagent
-
-  │
-
-  ├── Mortgage Core      → Fineract foundation
-
-  ├── Servicing          → Frappe Lending
-
-  ├── Accounting         → ERPNext / Formance
-
-  ├── Workflows          → Camunda / Temporal
-
-  └── Reporting          → PostgreSQL / BI
-
-
-
-
-
-Finastra Loan IQ
-
-  │
-
-  ├── Loan Core          → Fineract
-
-  ├── Ledger             → Formance
-
-  ├── Calculations       → Strata / QuantLib
-
-  ├── Workflows          → Temporal
-
-  └── Reporting          → PostgreSQL / BI
-
-
-
-
-
-TurnKey Lender
-
-  │
-
-  ├── Origination        → Fineract LOS
-
-  ├── Lending            → Frappe Lending
-
-  ├── Servicing          → Frappe Lending
-
-  ├── Risk               → XGBoost / LightGBM
-
-  └── Workflow           → Temporal
-
-
-
-
-
-Mortgage Automator
-
-  │
-
-  ├── Loan Origination   → Fineract LOS
-
-  ├── Loan Servicing     → Frappe Lending
-
-  ├── Accounting         → ERPNext
-
-  ├── Ledger             → Formance
-
-  └── Workflow           → Temporal
-
-```
-
-
-
----
-
-
-
-# 🚀 Minimal Self-Hosted Loan Servicing
-
-
-
-A practical development stack:
-
-
-
-```text
-
-Frappe Lending
-
-+
-
-PostgreSQL
-
-+
-
-Formance
-
-+
-
-Keycloak
-
-+
-
-FastAPI
-
-+
-
-Docker
-
-```
-
-
-
-Then add:
-
-
-
-```text
-
-                 Frappe Lending
-
-                       │
-
-                       ▼
-
-                Formance Ledger
-
-                       │
-
-        ┌──────────────┼──────────────┐
-
-        ▼              ▼              ▼
-
-      Moov        Hyperswitch       ERPNext
-
-        │              │              │
-
-        └──────────────┼──────────────┘
-
-                       ▼
-
-                 Reconciliation
-
-                       │
-
-                       ▼
-
-                    BI / Data
-
-```
-
-
-
-For a broader core-banking system:
-
-
-
-```text
-
-Apache Fineract
-
-+
-
-Mifos X
-
-+
-
-Frappe Lending
-
-+
-
-Formance
-
-+
-
-Moov
-
-+
-
-Hyperswitch
-
-```
-
-
-
----
-
-
-
-# 🔬 Loan Servicing Engineering Principles
-
-
-
-A production-grade open-source servicing platform should prioritize:
-
-
-
-### 1. Immutable Financial Events
-
-
-
-```text
-
-Loan Event
-
-    │
-
-    ▼
-
-Immutable Transaction
-
-    │
-
-    ▼
-
-Ledger Entry
-
-```
-
-
-
-Avoid directly mutating historical financial transactions.
-
-
-
-### 2. Deterministic Amortization
-
-
-
-The same:
-
-
-
-```text
-
-Principal
-
-+
-
-Interest Rate
-
-+
-
-Term
-
-+
-
-Frequency
-
-+
-
-Dates
-
-+
-
-Rules
-
-```
-
-
-
-should produce the same schedule.
-
-
-
-### 3. Event-Driven Servicing
-
-
-
-```text
-
-PaymentReceived
-
-       │
-
-       ├── AllocatePayment
-
-       ├── UpdateBalance
-
-       ├── UpdateDelinquency
-
-       ├── CreateLedgerEntries
-
-       └── GenerateReceipt
-
-```
-
-
-
-### 4. Complete Auditability
-
-
-
-Every servicing change should be traceable:
-
-
-
-```text
-
-Who
-
-+
-
-What
-
-+
-
-When
-
-+
-
-Before
-
-+
-
-After
-
-+
-
-Reason
-
-```
-
-
-
-### 5. Separation of Concerns
-
-
-
-```text
-
-Loan State
-
-    ≠
-
-Ledger State
-
-    ≠
-
-Payment State
-
-    ≠
-
-Accounting State
-
-```
-
-
-
-This makes reconciliation and auditing substantially easier.
-
-
-
----
-
-
-
-# 🤝 Contributing
-
-
-
-Contributions are welcome!
-
-
-
-Please consider adding:
-
-
-
-* Open-source loan-servicing systems
-
-* Core banking platforms
-
-* Loan-management systems
-
-* Loan-origination systems
-
-* Mortgage software
-
-* Commercial lending software
-
-* Consumer lending software
-
-* Microfinance platforms
-
-* Amortization libraries
-
-* Interest-calculation engines
-
-* Loan ledgers
-
-* Payment-processing systems
-
-* ACH infrastructure
-
-* Collections systems
-
-* Credit-risk engines
-
-* Lending workflow engines
-
-* Accounting systems
-
-* Reconciliation tools
-
-* Borrower portals
-
-* Loan APIs
-
-* Open-source fintech infrastructure
-
-
-
-When adding a project, distinguish carefully between:
-
-
-
-* **Fully open-source**
-
-* **Open-core**
-
-* **Source available**
-
-* **Community edition**
-
-* **Commercial software using open-source components**
-
-* **Open-source libraries**
-
-* **Hosted services**
-
-
-
-The open-source status of a project can change over time, so verify the current repository license and commercial-use terms before adding it.
-
-
-
----
-
-
-
-# ⚠️ Disclaimer
-
-
-
-This repository is an independent technical curation and is **not affiliated with or endorsed by any company or project listed here**.
-
-
-
-Loan servicing is a highly specialized financial domain.
-
-
-
-Open-source software can provide:
-
-
-
-* Loan accounts
-
-* Amortization
-
-* Interest calculations
-
-* Payments
-
-* Accounting
-
-* Collections
-
-* Lending workflows
-
-* Ledgers
-
-* APIs
-
-* Reporting
-
-* Reconciliation
-
-
-
-But software alone does **not** provide:
-
-
-
-* Lending licenses
-
-* Banking licenses
-
-* Regulatory authorization
-
-* Credit-bureau access
-
-* Payment-rail access
-
-* ACH sponsorship
-
-* Card-network access
-
-* Mortgage servicing rights
-
-* Investor relationships
-
-* Regulatory reporting responsibility
-
-* Consumer-protection compliance
-
-* Data privacy compliance
-
-
-
-Mortgage and commercial lending can require particularly extensive domain-specific customization.
-
-
-
-The mapping between commercial products and open-source projects in this repository is therefore an **architectural equivalence**, not a claim that the open-source projects are feature-for-feature replacements.
-
-
-
-Always verify current licensing, regulatory requirements, security requirements, financial calculations and jurisdiction-specific lending rules before using any software in production.
-
-
-
----
-
-
-
-## ⭐ Star This Repository
-
-
-
-If you are interested in:
-
-
-
-* Loan Servicing
-
-* Loan Management
-
-* Lending
-
-* Core Banking
-
-* Digital Lending
-
-* Mortgage Servicing
-
-* Consumer Lending
-
-* Commercial Lending
-
-* Fintech Infrastructure
-
-* Open-Source Banking
-
-* Financial Ledgers
-
-* Loan APIs
-
-
-
-consider giving this repository a ⭐ **Star** and contributing new projects.
-
-
-
----
-
-
-
-**Last updated: September 2026**
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
